@@ -47,7 +47,7 @@ for i in range(0, len(resultado['text'])):
     if confianca > min_conf:
         texto = resultado['text'][i]
         if re.match(padrao_data, texto):
-            x, y, img = caixa_texto(resultado, img_copia)
+            x, y, img = caixa_texto(resultado, img_copia, (0,0,255))
             print(x, y)        
             img_copia = escreve_texto(texto, x, y, img_copia, fonte, 12)
             datas.append(texto)
